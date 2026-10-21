@@ -1,7 +1,6 @@
 # Maria Foskolou · Portfolio
-Static site (HTML/CSS/JS, no build step). Open `index.html` locally, or deploy on GitHub Pages:
-1. Create a repo (e.g. `maria-portfolio`) and upload everything in this folder (keep `.nojekyll`).
-2. Repo **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)` → Save**.
-3. Site goes live at `https://<username>.github.io/<repo>/` (name the repo `<username>.github.io` for a root URL).
+`index.html` is fully self-contained (all images, CSS and JS are embedded), so the site cannot lose its images when uploaded.
 
-Edit your LinkedIn link in `index.html` (`id="li"`). Copy lives in `app.js`; colours are variables at the top of `style.css`.
+**Deploy on GitHub Pages:** create a repo → upload `index.html` and `.nojekyll` (the `source/` folder is optional) → Settings → Pages → Deploy from a branch → `main` / root → Save. Live at `https://<username>.github.io/<repo>/`.
+
+**Editing:** change text/colours in `source/app.js` / `source/style.css`, then run `python3 source/build.py` to regenerate `index.html`. Replace the LinkedIn link in `source/index.html` (`id="li"`).
